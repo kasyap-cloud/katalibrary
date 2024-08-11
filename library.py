@@ -33,5 +33,9 @@ class Library :
             raise ValueError("Book is not available")
         
     def returnBook(self, isbn):
-        # code to be written to return a book bak to the list .
-        return 0
+        book = self.findBook(isbn)
+        if book in self.borrowedBooks:
+            self.borrowedBooks.remove(book)
+            self.books.append(book)
+        else:
+            raise ValueError("Book was not borrowed.")
