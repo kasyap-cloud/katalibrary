@@ -16,6 +16,18 @@ class Library :
     def viewAvailableBooks(self):
         return list(self.books)
     
+    def findBook(self, isbn):
+        for book in list(set(self.books) | set(self.borrowedBooks)):
+            if book.isbn == isbn:
+                return book
+        raise ValueError("Book not found.")
+    
     def borrowBook(self, isbn):
-        # have to code about borrowing a book form the avilable list
-        return 0
+        book = self.findBook(isbn)
+        if book in self.borrowedBooks:
+            raise ValueError("Book is already borrowed")
+        if book in self.books:
+            self.books.remove(book)
+            self.borrowedBooks.append(book)
+        else:
+            raise ValueError("Book is not available")
