@@ -12,4 +12,10 @@ class Library :
         
     def addBook(self, book):
         self.books.append(book)
+        
+    def viewAvailableBooks(self):
+        return list(self.books)
+    
+    def borrowBook(self, isbn):
+        # have to code about borrowing a book form the avilable list
         return 0
