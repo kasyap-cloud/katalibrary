@@ -11,5 +11,5 @@ class Library :
         self.borrowedBooks = list()
         
     def addBook(self, book):
-        # code to add book into a list
+        self.books.append(book)
         return 0
