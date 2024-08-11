@@ -17,6 +17,14 @@ class testLibrary(unittest.TestCase):
         self.library.borrowBook(book.isbn)
         availableBooks = self.library.viewAvailableBooks()
         self.assertNotIn(book, availableBooks)
+        
+    def testReturnBook(self):
+        book = Book(isbn="1234567890", title="Test Book", author="Test Author", year=2024)
+        self.library.addBook(book)
+        self.library.borrowBook(book.isbn)
+        self.library.returnBook(book.isbn)
+        availableBooks = self.library.viewAvailableBooks()
+        self.assertIn(book, availableBooks)
 
 if __name__ == '__main__':
     unittest.main()

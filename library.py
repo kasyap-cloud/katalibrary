@@ -31,3 +31,7 @@ class Library :
             self.borrowedBooks.append(book)
         else:
             raise ValueError("Book is not available")
+        
+    def returnBook(self, isbn):
+        # code to be written to return a book bak to the list .
+        return 0
