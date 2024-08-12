@@ -31,3 +31,15 @@ The project directory is organized as follows:
 ```bash  
 pip install -r requirements.txt
 ```
+
+### Future Improvements
+Implement data persistence (database integration)
+Add user authentication and authorization
+Implement a graphical user interface
+Add more advanced search and filter options for books
+
+### Conclusion
+This project demonstrates the ability to design and implement a basic library management system while adhering to best practices in software development. The system is built with a focus on maintainability, scalability, and reliability, ensuring that it meets the requirements of the Incyubyte campus placement drive technical round.
+
+### Thank You
+Thank you for taking the time to review this project. I hope this system meets the expectations and requirements of the Incyubyte placement drive.
